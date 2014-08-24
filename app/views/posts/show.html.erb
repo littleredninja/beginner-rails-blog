@@ -1,0 +1,11 @@
+<h1> here i am! </h1>
+
+<h1> <%= @current_post.title %></h1>
+
+<p> <%= @current_post.post_text %> </p>
+
+<%= form_for :post, url: posts_path do |f| %>
+
+<% end %>
+ 
+<%= link_to 'Back to all posts!', posts_path %>
