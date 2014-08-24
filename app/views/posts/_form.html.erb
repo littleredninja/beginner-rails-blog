@@ -1,5 +1,4 @@
-
-<%= form_for :post, url: posts_path do |f| %>
+<%= form_for :post do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2> <%= pluralize(@post.errors.count, "error") %>
@@ -21,9 +20,5 @@
     <%= f.text_area :post_text %>
   </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <p><%= f.submit %></p>
 <% end %>
-
-<%= link_to 'Just kidding, back to all posts!', posts_path %>

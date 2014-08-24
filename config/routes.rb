@@ -4,7 +4,7 @@ Blog::Application.routes.draw do
 
   root 'posts#index'
 
-  get 'posts/:id' => 'posts#show'
+  # get 'post/:id' => 'posts#show'
 
 
 
