@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140824195044) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "post_text"
@@ -22,7 +25,8 @@ ActiveRecord::Schema.define(version: 20140824195044) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "user"
+    t.string   "name"
+    t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
