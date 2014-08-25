@@ -1,13 +1,13 @@
 <div class='container'>
 
-<%= link_to 'New post', new_post_path %>	
+<%= link_to 'New post', new_post_path, class: 'link_button' %>	
 
 	<% @posts.each do |post| %>
 		<h2><%= link_to "#{post.title}", post %></h2>
 
 		<p><%= post.post_text %></p>
 
-		<%= link_to 'Edit', edit_post_path(post) %>
+		<%= link_to 'Edit', edit_post_path(post), class: 'link_button' %>
 
 	<% end %>
 

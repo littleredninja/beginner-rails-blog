@@ -3,9 +3,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Delete this post', post_path(@post), method: :delete, data: { confirm: 'Are you absolutely positive?' } %>
+<%= link_to 'Delete this post', post_path(@post), method: :delete, data: { confirm: 'Are you absolutely positive?' }, class: 'link_button' %>
 <br>
 
 
-<%= link_to 'Just kidding, back to all posts!', posts_path %>
+<%= link_to 'Just kidding, back to all posts!', posts_path, class: 'link_button' %>
 

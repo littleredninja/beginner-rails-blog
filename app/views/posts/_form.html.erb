@@ -12,13 +12,13 @@
   <% end %>
   <p> 
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => 'form_input_title' %>
   </p>
 
   <p>
     <%= f.label :post_text %><br>
-    <%= f.text_area :post_text %>
+    <%= f.text_area :post_text, :class => 'form_input_text' %>
   </p>
 
-  <p><%= f.submit %></p>
+  <p><%= f.submit :class => 'button' %></p>
 <% end %>
