@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
-	has_many :users
-
-	has_secure_password
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+	has_many :posts
+	has_many :comments, foreign_key: :commenter_id
+	validates :email, presence: true
+	# has_secure_password
 end
