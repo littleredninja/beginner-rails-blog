@@ -5,6 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :posts
 	has_many :comments, foreign_key: :commenter_id
-	validates :email, presence: true
-	# has_secure_password
+	validates :email, presence: true, uniqueness: true
 end

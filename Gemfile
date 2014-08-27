@@ -34,6 +34,9 @@ gem 'bcrypt', '~> 3.1.7'
 # For Heroku
 gem 'rails_12factor', group: :production
 
+# Better Errors
+gem "better_errors", group: :development
+gem "binding_of_caller", group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
